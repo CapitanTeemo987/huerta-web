@@ -1,34 +1,34 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-20 flex items-center justify-between">
+    <section className="relative h-screen">
 
-      <div className="max-w-xl">
+      <Image src="/images/hero.jpg" alt="Huerta de aguacates" fill priority className="object-cover"/>
 
-        <h1 className="text-5xl font-bold text-green-700">
-          Aguacate Hass Premium
-        </h1>
+      <div className="absolute inset-0 bg-black/50"></div>
 
-        <p className="mt-6 text-lg text-gray-600">
-          Productores comprometidos con la calidad y el suministro
-          confiable para empacadoras nacionales e internacionales.
-        </p>
+      <div className="relative z-10 h-full items-center flex justify-center">
 
-        <button className="mt-8 bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
-          Solicitar cotización
-        </button>
+        <div className="max-w-xl p-10 bg-white/90">
+
+          <h1 className="text-6xl font-bold text-black text-center">
+              Aguacate Hass Premium
+          </h1>
+          
+          <p className="mt-6 text-lg leading-8 text-gray-900">
+            Productores comprometidos con ofrecer fruta de la más alta
+            calidad para empacadoras nacionales e internacionales.
+          </p>
+
+          <button
+            className="mt-10 rounded-xl bg-green-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-green-700">
+            Solicitar cotización
+          </button>
+
+        </div>
 
       </div>
-
-      <div >
-
-        <img
-          src="/images/hero.jpg"
-          alt="Imagen de arboles de aguacate"
-          className="rounded-sm shadow-sm w-[500px]"
-        />
-
-      </div>
-
     </section>
   );
 }
